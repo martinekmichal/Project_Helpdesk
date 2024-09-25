@@ -12,7 +12,7 @@ User List
     <ul>
         {% for user in object_list %}
             <li>
-                <a href="{% url 'user_detail' user.pk %}">{{ user.meno }}</a>
+                <a href="{% url 'user_detail' user.pk %}">{{ user.jmeno }}</a>
                 <p></p>
             </li>
         {% endfor %}

@@ -1,10 +1,10 @@
 from django import forms
-from django.db import models
+from .models import Helpdesk
 
 
 
 class HelpdeskForm(forms.ModelForm):
     class Meta:
-        model = User
+        model = Helpdesk
         fields = ['jmeno', 'telefon']
 
