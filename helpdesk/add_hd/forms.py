@@ -5,6 +5,6 @@ from django.db import models
 
 class HelpdeskForm(forms.ModelForm):
     class Meta:
-        model = user
+        model = User
         fields = ['jmeno', 'telefon']
 
