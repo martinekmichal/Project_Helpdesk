@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "master.html" %}
 
-</body>
-</html>
+{% block title %}
+Editace uživatelů
+{% endblock %}
+
+{% block content %}
+<h1>Úprava uživatele</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Uložit změny</button>
+</form>
+<button type="button" onclick="window.location.href='{% url 'user_list' %}';">Seznam uživatelů</button>
+{% endblock %}

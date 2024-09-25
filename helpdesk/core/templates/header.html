@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<header>
+<nav>
+    <ul>
+        <a href="{% url 'home' %}">Domů</a> |
+        <a href="{% url 'about' %}">O Helpdesku</a> |
+        <a href="{% url 'HD_list' %}">HelpDesk List</a> |
+        <a href="{% url 'login' %}">Prihlasit</a> |
+        <a href="{% url 'register' %}">Registrace</a>
 
-</body>
-</html>
+    </ul>
+</nav>
+</header>
