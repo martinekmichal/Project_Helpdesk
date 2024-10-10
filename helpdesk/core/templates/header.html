@@ -1,6 +1,6 @@
 {% load static %}
 <header>
-<nav>
+<nav class="header_ul">
     <ul>
         <a href="{% url 'home' %}">Domů</a> |
         <a href="{% url 'about' %}">O Helpdesku</a> |
@@ -10,8 +10,9 @@
 
     </ul>
 </nav>
-    <nav1 class="nav1">
+    <div class="nav1">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
          Helpdesk
-    </nav1>
+
+    </div>
 </header>
