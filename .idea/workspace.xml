@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e10c1be4-b494-4693-9e98-f6a09c2d7e2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/helpdesk/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpdesk/core/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/helpdesk/core/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpdesk/core/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/helpdesk/core/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpdesk/core/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/helpdesk/core/templates/master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpdesk/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/helpdesk/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpdesk/helpdesk/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpdesk/helpdesk/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,42 +21,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "martinekmichal"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;martinekmichal&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/martinekmichal/Project_Helpdesk.git",
-    "accountId": "bc3e2c94-9646-4ba7-b2bb-2a11633da0d2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/martinekmichal/Project_Helpdesk.git&quot;,
+    &quot;accountId&quot;: &quot;bc3e2c94-9646-4ba7-b2bb-2a11633da0d2&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2mWeE81TSQywpou8RtiyV3Y0WcN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,16 +75,5 @@
       <updated>1727196644726</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/helpdesk/helpdesk/urls.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
