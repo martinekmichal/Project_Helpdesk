@@ -1,5 +1,6 @@
 {% load static %}
 <header>
+ <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <nav class="header_ul">
     <ul>
         <a href="{% url 'home' %}">Domů</a> |
@@ -10,10 +11,15 @@
 
     </ul>
 </nav>
-    <div class="nav1">
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <div class="nav1" id="nav1">
+
+
+
          Helpdesk
 
+        <img id="logo" src="{% static 'img/ok_1.png' %}"  alt="logo" width="80px">
     </div>
-    <img src="{% static 'img/ok_1.png' %}"  alt="s" width="100px">
+
+
+    <script type="text/javascript" src="{% static 'css/script_js.js' %}"></script>
 </header>
