@@ -4,6 +4,8 @@ from .forms import HelpdeskForm, Helpdesk
 from django.contrib.auth.models import User
 from .models import Helpdesk
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils import timezone
+
 
 
 
@@ -47,7 +49,8 @@ def helpdesk_create(request):
 
 def helpdesk_list(request):
     helpdesks = Helpdesk.objects.all()
-    return render(request, 'HDD_list.html', {'helpdesks': helpdesks})
+    now = timezone.now().date()
+    return render(request, 'HDD_list.html', {'helpdesks': helpdesks, 'now': now})
 
 
 class HelpdeskUpdateView(UpdateView):

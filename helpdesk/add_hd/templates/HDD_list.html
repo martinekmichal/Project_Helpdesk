@@ -2,8 +2,6 @@
 {% load static %}
 {% load tz %}
 
-
-
 {% block title %}
 Seznam požadavků
 {% endblock %}
@@ -13,11 +11,16 @@ Seznam požadavků
 <ul>
     {% with now=now %}
         {% for helpdesk in helpdesks %}
-            <li class="{% if helpdesk.termin_splneni < now %}expired{% endif %}">
-                {{ helpdesk.jmeno_zadatele }} - {{ helpdesk.popis_problemu }} - Termín: {{ helpdesk.termin_splneni }}  (Ukončeno: {{ helpdesk.zpracovano|yesno:"Ano,Ne" }} )
-                <a href="{% url 'HD_edit' helpdesk.id %}" class="btn">Upravit</a>
-                <a href="{% url 'HD_delete' helpdesk.id %}" class="btn btn-danger">Smazat</a>
+             <li style="color:
+                {% if helpdesk.zpracovano %} gray
+                {% elif helpdesk.termin_splneni < now %} red
+                {% else %} black {% endif %};">
 
+                {{ helpdesk.jmeno_zadatele }} - {{ helpdesk.popis_problemu }} - Termín: {{ helpdesk.termin_splneni }}
+                (Ukončeno: {{ helpdesk.zpracovano|yesno:"Ano,Ne" }} )
+
+                <a href="{% url 'HD_edit' helpdesk.id %}" class="btn">Upravit</a> |
+                <a href="{% url 'HD_delete' helpdesk.id %}" class="btn btn-danger">Smazat</a>
             </li>
         {% empty %}
             <li>Žádné tikety k zobrazení.</li>
@@ -25,10 +28,10 @@ Seznam požadavků
     {% endwith %}
 </ul>
 
-
 <form action="{% url 'HD_create' %}" method="get">
     <button type="submit" class="btn">Založ nový požadavek</button>
 </form>
 
+<script type="text/javascript" src="{% static 'css/script_js.js' %}"></script>
 
 {% endblock %}

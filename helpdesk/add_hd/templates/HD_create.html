@@ -5,13 +5,15 @@ Create New Helpdesk Entry
 {% endblock %}
 
 {% block content %}
-<h1>Create New Helpdesk Entry</h1>
+<h1>Založení nového požadavku</h1>
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <button type="submit">Uložit</button>
+</form>
+<form action="{% url 'HDD_list' %}" method="get">
+    <button type="submit" class="btn">Zpět na požadavky</button>
 </form>
 
-<a href="{% url 'HD_list' %}">Back to Helpdesk List</a>
 {% endblock %}
