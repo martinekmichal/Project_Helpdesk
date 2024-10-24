@@ -11,6 +11,8 @@ urlpatterns = [
     path("kontakt_detail/<int:pk>/edit/", UserUpdateView.as_view(), name="kontakt_edit"),
     path('HD_create/', views.helpdesk_create, name='HD_create'),
     path('HDD_list/', views.helpdesk_list, name='HDD_list'),
+    path('HD_edit/<int:pk>/', HelpdeskUpdateView.as_view(), name='HD_edit'),
+    path('HD_delete/<int:pk>/', HelpdeskDeleteView.as_view(), name='HD_delete'),
 
 
 ]

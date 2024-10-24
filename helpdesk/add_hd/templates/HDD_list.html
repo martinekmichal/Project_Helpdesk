@@ -1,13 +1,34 @@
 {% extends "master.html" %}
+{% load static %}
+{% load tz %}
+
 
 
 {% block title %}
-HelpDesk List
+Seznam požadavků
 {% endblock %}
 
 {% block content %}
-<h1>HelpDesk seznam požadavků</h1>
+<h1>Seznam založených požadavků:</h1>
+<ul>
+    {% with now=now %}
+        {% for helpdesk in helpdesks %}
+            <li class="{% if helpdesk.termin_splneni < now %}expired{% endif %}">
+                {{ helpdesk.jmeno_zadatele }} - {{ helpdesk.popis_problemu }} - Termín: {{ helpdesk.termin_splneni }}  (Ukončeno: {{ helpdesk.zpracovano|yesno:"Ano,Ne" }} )
+                <a href="{% url 'HD_edit' helpdesk.id %}" class="btn">Upravit</a>
+                <a href="{% url 'HD_delete' helpdesk.id %}" class="btn btn-danger">Smazat</a>
 
+            </li>
+        {% empty %}
+            <li>Žádné tikety k zobrazení.</li>
+        {% endfor %}
+    {% endwith %}
+</ul>
+
+
+<form action="{% url 'HD_create' %}" method="get">
+    <button type="submit" class="btn">Založ nový požadavek</button>
+</form>
 
 
 {% endblock %}

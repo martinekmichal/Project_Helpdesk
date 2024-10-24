@@ -13,6 +13,7 @@ class Helpdesk(models.Model):
     popis_problemu = models.TextField(default='Není k dispozici')
     resitel = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     vyjadreni = models.TextField(blank=True, null=True)
+    zpracovano = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.jmeno_zadatele} - {self.datum_zalozeni}"

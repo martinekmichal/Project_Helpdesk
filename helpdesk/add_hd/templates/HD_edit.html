@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "master.html" %}
 
-</body>
-</html>
+{% block title %}
+Upravit požadavek
+{% endblock %}
+
+{% block content %}
+<h1>Upravit požadavek pro {{ form.instance.jmeno_zadatele }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Uložit změny</button>
+</form>
+<a href="{% url 'HDD_list' %}" class="btn">Zrušit</a>
+{% endblock %}

@@ -3,7 +3,8 @@ from django.views.generic import ListView, DetailView, CreateView, DeleteView, U
 from .forms import HelpdeskForm, Helpdesk
 from django.contrib.auth.models import User
 from .models import Helpdesk
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+
 
 
 
@@ -32,10 +33,6 @@ class UserUpdateView(UpdateView):
     template_name = 'user_edit.html'
     success_url = reverse_lazy('user_list')
 
-def helpdesk_list(request):
-    helpdesks = Helpdesk.objects.all()
-    return render(request, 'HD_list.html', {'helpdesks': helpdesks})
-
 
 def helpdesk_create(request):
     if request.method == 'POST':
@@ -48,4 +45,24 @@ def helpdesk_create(request):
 
     return render(request, 'HD_create.html', {'form': form})
 
+def helpdesk_list(request):
+    helpdesks = Helpdesk.objects.all()
+    return render(request, 'HDD_list.html', {'helpdesks': helpdesks})
 
+
+class HelpdeskUpdateView(UpdateView):
+    model = Helpdesk
+    form_class = HelpdeskForm
+    template_name = 'HD_edit.html'
+    success_url = reverse_lazy('HDD_list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Upravit požadavek'
+        return context
+
+
+class HelpdeskDeleteView(DeleteView):
+    model = Helpdesk
+    template_name = 'HD_delete.html'
+    success_url = reverse_lazy('HDD_list')
