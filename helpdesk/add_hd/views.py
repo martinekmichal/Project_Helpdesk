@@ -1,8 +1,10 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
-from .models import Helpdesk
 from .forms import HelpdeskForm, Helpdesk
 from django.contrib.auth.models import User
+from .models import Helpdesk
+from django.shortcuts import render, redirect
+
 
 
 class UserListView(ListView):
@@ -30,6 +32,20 @@ class UserUpdateView(UpdateView):
     template_name = 'user_edit.html'
     success_url = reverse_lazy('user_list')
 
-def hd_list(request):
+def helpdesk_list(request):
     helpdesks = Helpdesk.objects.all()
-    return render(request, "HD_list.html", {"helpdesks":helpdesks})
+    return render(request, 'HD_list.html', {'helpdesks': helpdesks})
+
+
+def helpdesk_create(request):
+    if request.method == 'POST':
+        form = HelpdeskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('HDD_list')
+    else:
+        form = HelpdeskForm()
+
+    return render(request, 'HD_create.html', {'form': form})
+
+

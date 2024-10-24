@@ -3,6 +3,8 @@ from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 
 
+
+
 def home_page(request):
     return render(request, "home.html")
 
@@ -26,3 +28,7 @@ def register_page(request):
     return render(request,
                   'register.html',
                   {'form': UserRegisterForm()})
+
+#def hd_list(request):
+#    helpdesks = Helpdesk.objects.all()
+#    return render(request, "HDD_list.html", {"helpdesks":helpdesks})
