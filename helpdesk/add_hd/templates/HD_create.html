@@ -1,7 +1,7 @@
 {% extends "master.html" %}
 
 {% block title %}
-Create New Helpdesk Entry
+Založení nového požadavku
 {% endblock %}
 
 {% block content %}
@@ -10,10 +10,13 @@ Create New Helpdesk Entry
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Uložit</button>
+    <div class="button-container">
+        <button type="submit">Uložit </button>
+        <form action="{% url 'HDD_list' %}" method="get">
+            <button type="submit" class="btn">Zpět na požadavky</button>
+        </form>
+    </div>
 </form>
-<form action="{% url 'HDD_list' %}" method="get">
-    <button type="submit" class="btn">Zpět na požadavky</button>
-</form>
+
 
 {% endblock %}
