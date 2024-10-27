@@ -89,3 +89,30 @@
     margin: 30px 0;
 
 }
+
+.btn_hddelete {
+    display: inline-block;          /* Zobrazí jako blok pro zarovnání */
+    padding: 10px 20px;           /* Vnitřní odsazení */
+    background-color: #007bff;    /* Barva pozadí */
+    color: white;                  /* Barva textu */
+    text-decoration: none;         /* Odstranění podtržení */
+    border-radius: 5px;           /* Zaoblené rohy */
+    transition: background-color 0.3s; /* Přechod pro změnu barvy */
+}
+
+.btn_hddelete:hover {
+    background-color: #0056b3;    /* Barva pozadí při najetí myší */
+}
+.btn_hdzaloz {
+    display: inline-block;          /* Zobrazí jako blok pro zarovnání */
+    padding: 10px 20px;           /* Vnitřní odsazení */
+    background-color: #007bff;    /* Barva pozadí */
+    color: white;                  /* Barva textu */
+    text-decoration: none;         /* Odstranění podtržení */
+    border-radius: 5px;           /* Zaoblené rohy */
+    transition: background-color 0.3s; /* Přechod pro změnu barvy */
+}
+
+.btn_hdzaloz:hover {
+    background-color: #0056b3;    /* Barva pozadí při najetí myší */
+}

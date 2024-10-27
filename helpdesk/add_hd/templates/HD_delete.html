@@ -1,4 +1,5 @@
 {% extends "master.html" %}
+{% load static %}
 
 {% block title %}
     Potvrzení smazání
@@ -9,7 +10,7 @@
 
 <form method="post">
     {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Ano, smazat</button>
-    <a href="{% url 'HDD_list' %}" class="btn">Zrušit</a>
+    <button type="submit" class="btn_hddelete">Ano, smazat</button>
+    <a href="{% url 'HDD_list' %}" class="btn_hddelete">Zrušit</a>
 </form>
 {% endblock %}
