@@ -29,6 +29,3 @@ def register_page(request):
                   'register.html',
                   {'form': UserRegisterForm()})
 
-#def hd_list(request):
-#    helpdesks = Helpdesk.objects.all()
-#    return render(request, "HDD_list.html", {"helpdesks":helpdesks})

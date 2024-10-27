@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+<h1>Tato stránka neexistuje</h1>
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding: 50px;">
+    <h1 style="font-size: 48px; color: #dc3545;">404</h1>
+    <h2>Tato stránka neexistuje.</h2>
+    <p>Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena.</p>
+    <p>Zkuste to prosím znovu nebo se vraťte na <a href="{% url 'home' %}" style="color: blue; text-decoration: underline;">domovskou stránku</a>.</p>
+  <br>
+    <h3>Pokud máte další dotazy, kontaktujte administrátora:</h3>
+    <p>Email: <a href="mailto:martinek.m.84@gmail.com style="color: blue; text-decoration: underline;">admin@helpdeskMM.cz</a></p>
+</div>
+{% endblock %}

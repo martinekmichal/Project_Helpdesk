@@ -8,25 +8,40 @@ Seznam požadavků
 
 {% block content %}
 <h1>Seznam založených požadavků:</h1>
-<ul>
-    {% with now=now %}
-        {% for helpdesk in helpdesks %}
-             <li style="color:
-                {% if helpdesk.zpracovano %} gray
-                {% elif helpdesk.termin_splneni < now %} red
-                {% else %} black {% endif %};">
-
-                {{ helpdesk.jmeno_zadatele }} - {{ helpdesk.popis_problemu }} - Termín: {{ helpdesk.termin_splneni }}
-                (Ukončeno: {{ helpdesk.zpracovano|yesno:"Ano,Ne" }} )
-
-                <a href="{% url 'HD_edit' helpdesk.id %}" class="btn">Upravit</a> |
-                <a href="{% url 'HD_delete' helpdesk.id %}" class="btn btn-danger">Smazat</a>
-            </li>
-        {% empty %}
-            <li>Žádné tikety k zobrazení.</li>
-        {% endfor %}
-    {% endwith %}
-</ul>
+<table style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid black; padding: 8px;">Jméno žadatele</th>
+            <th style="border: 1px solid black; padding: 8px;">Popis problému</th>
+            <th style="border: 1px solid black; padding: 8px;">Termín</th>
+            <th style="border: 1px solid black; padding: 8px;">Ukončeno</th>
+            <th style="border: 1px solid black; padding: 8px;">Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% with now=now %}
+            {% for helpdesk in helpdesks %}
+                <tr style="color:
+                    {% if helpdesk.zpracovano %} gray
+                    {% elif helpdesk.termin_splneni < now %} red
+                    {% else %} black {% endif %};">
+                    <td style="border: 1px solid black; padding: 8px;">{{ helpdesk.jmeno_zadatele }}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{ helpdesk.popis_problemu }}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{ helpdesk.termin_splneni }}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{ helpdesk.zpracovano|yesno:"Ano,Ne" }}</td>
+                    <td style="border: 1px solid black; padding: 8px;">
+                        <a href="{% url 'HD_edit' helpdesk.id %}" class="btn">Upravit</a> |
+                        <a href="{% url 'HD_delete' helpdesk.id %}" class="btn btn-danger">Smazat</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5" style="text-align: center; padding: 8px;">Žádné tikety k zobrazení.</td>
+                </tr>
+            {% endfor %}
+        {% endwith %}
+    </tbody>
+</table>
 
 <form action="{% url 'HD_create' %}" method="get">
     <button type="submit" class="btn">Založ nový požadavek</button>
