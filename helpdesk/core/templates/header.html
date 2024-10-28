@@ -8,6 +8,7 @@
             <li style="margin-right: 8px;"><a href="{% url 'register' %}">Registrace</a></li>
             {% if user.is_authenticated %}
                 <li style="margin-right: 8px;"><a href="{% url 'HD_list' %}">HelpDesk List</a></li>
+                <li style="margin-right: 8px;"><a href="{% url 'profile' %}">Profil</a></li>
                 <li style="display: inline;">
                     <form method="post" action="{% url 'logout' %}" style="display: inline;">
                         {% csrf_token %}

@@ -1,0 +1,9 @@
+<h1>Upravit profil</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn_profile">Uložit změny</button>
+    <a href="{% url 'profile' %}" class="btn_profile">Zpět na profil</a>
+</form>
+

@@ -1,9 +1,18 @@
 {% extends "master.html" %}
 
 {% block content %}
-    <div>
-        <h1>Profile</h1>
-      <h2 class="account-heading">{{ user.username }}</h2>
+ <h1>Profil uživatele</h1>
 
-    </div>
+<p><strong>Uživatelské jméno:</strong> {{ user.username }}</p>
+<p><strong>Jméno:</strong> {{ user.first_name }}</p>
+<p><strong>Příjmení:</strong> {{ user.last_name }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Datum registrace:</strong> {{ user.date_joined }}</p>
+
+<a href="{% url 'edit_profile' %}" class="btn_profile">Upravit profil</a>
+<form method="post" action="{% url 'logout' %}" style="display: inline;">
+                        {% csrf_token %}
+    <a href="#" onclick="this.closest('form').submit(); return false;" class="btn_profile">Logout</a>
+</form>
+<!--<a href="{% url 'logout' %}" class="btn_profile">Odhlásit se</a> -->
 {% endblock content %}

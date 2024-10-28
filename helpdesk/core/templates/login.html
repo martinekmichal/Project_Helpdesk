@@ -4,9 +4,8 @@
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Prihlasit</button>
+        <button type="submit" class="btn_profile">Prihlasit</button>
+        <a href="{% url 'register' %}" class="btn_profile">Registrace</a>
     </form>
-    <small>
-        Potrebujes ucet? <a href="{% url 'register' %}">Registrace</a>
-    </small>
+    
 {% endblock content %}
