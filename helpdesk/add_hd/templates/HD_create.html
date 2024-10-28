@@ -10,12 +10,12 @@ Založení nového požadavku
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <div class="button-container">
-        <button type="submit">Uložit </button>
-        <form action="{% url 'HDD_list' %}" method="get">
-            <button type="submit" class="btn">Zpět na požadavky</button>
-        </form>
-    </div>
+
+    <button type="submit" class="btn_hdcreate">Uložit </button>
+
+    <form action="{% url 'HDD_list' %}" method="get">
+        <button type="submit" class="btn_hdcreate">Zpět na požadavky</button>
+    </form>
 </form>
 
 

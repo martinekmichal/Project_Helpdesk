@@ -91,28 +91,44 @@
 }
 
 .btn_hddelete {
-    display: inline-block;          /* Zobrazí jako blok pro zarovnání */
-    padding: 10px 20px;           /* Vnitřní odsazení */
-    background-color: #007bff;    /* Barva pozadí */
-    color: white;                  /* Barva textu */
-    text-decoration: none;         /* Odstranění podtržení */
-    border-radius: 5px;           /* Zaoblené rohy */
-    transition: background-color 0.3s; /* Přechod pro změnu barvy */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn_hddelete:hover {
-    background-color: #0056b3;    /* Barva pozadí při najetí myší */
+    background-color: #0056b3;
 }
 .btn_hdzaloz {
-    display: inline-block;          /* Zobrazí jako blok pro zarovnání */
-    padding: 10px 20px;           /* Vnitřní odsazení */
-    background-color: #007bff;    /* Barva pozadí */
-    color: white;                  /* Barva textu */
-    text-decoration: none;         /* Odstranění podtržení */
-    border-radius: 5px;           /* Zaoblené rohy */
-    transition: background-color 0.3s; /* Přechod pro změnu barvy */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn_hdzaloz:hover {
-    background-color: #0056b3;    /* Barva pozadí při najetí myší */
+    background-color: #0056b3;
+
+}
+
+.btn_hdcreate {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn_hdcreate:hover {
+    background-color: #0056b3;
+
 }

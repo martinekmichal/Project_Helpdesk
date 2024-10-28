@@ -9,7 +9,9 @@ Upravit požadavek
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn">Uložit změny</button>
+
+<button type="submit" class="btn_hdcreate">Uložit změny</button>
+<a href="{% url 'HDD_list' %}" class="btn_hdcreate">Zrušit</a>
 </form>
-<a href="{% url 'HDD_list' %}" class="btn">Zrušit</a>
+
 {% endblock %}
