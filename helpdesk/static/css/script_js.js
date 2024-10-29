@@ -21,7 +21,7 @@ const links = document.querySelectorAll('.header_ul a');
 const nav1 = document.getElementById('nav1');
     links.forEach(link => {
         link.addEventListener('mouseover', () => {
-            nav1.style.transform = 'scale(1.3)';
+            nav1.style.transform = 'scale(1.3 )';
             nav1.style.transition = 'transform 0.3s ease';
         });
 
